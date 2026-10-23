@@ -79,7 +79,9 @@ class my_custom_op_cube_data_layout:
         self.indexing_map = [al.affine_map.get_identity(1)]
         # Set data layout for CUBE operations
         self.data_layout = {
-            "a": (al.DataLayout.DOTA_ND, al.DataLayout.zN), "b": (al.DataLayout.DOTB_ND, al.DataLayout.nZ)
+            "a": al.DataLayout.DOTA_ND, 
+            "b": al.DataLayout.DOTB_ND,
+            "out": al.DataLayout.Fractal
         }
 
 
